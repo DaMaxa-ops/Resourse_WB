@@ -49,7 +49,7 @@ def get_indicator_data():
                     print(record)
 
                 filename = f"{country_code}_{indicator_code}_{latest_year}.csv"
-                with open(filename, mode='w', newline='', encoding='utf-8') as file:
+                with open(filename, mode='w', newline='') as file:
                     writer = csv.DictWriter(file, fieldnames=records[0].keys())
                     writer.writeheader()
                     writer.writerows(records)
