@@ -30,7 +30,7 @@ def get_indicator_data():
             latest = valid_data[0]
             latest_year = int(latest['date'])
 
-            print(f"\n✅ Последний доступный год: {latest_year}")
+            print(f"Последний доступный год: {latest_year}")
 
             records = []
             for item in valid_data:
