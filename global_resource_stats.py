@@ -46,7 +46,7 @@ def get_latest_data_for_indicator(indicator_code, indicator_name):
 def save_to_csv(indicator_code, indicator_name, records):
     if records:
         filename = f"{indicator_code}_latest.csv"
-        with open(filename, mode='w', newline='', encoding='utf-8') as file:
+        with open(filename, mode='w', newline='') as file:
             writer = csv.DictWriter(file, fieldnames=records[0].keys())
             writer.writeheader()
             writer.writerows(records)
